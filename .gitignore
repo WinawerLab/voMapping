@@ -2,4 +2,5 @@
 # Ignore downloaded data and generated images
 Data/*
 Images/*
-
+*.zip
+*.DS_Store

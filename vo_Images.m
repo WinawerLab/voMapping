@@ -16,8 +16,7 @@ function vo_Images(subjnum)
 if nargin==0, subjnum = 1; end
 
 % Where is the session?
-projdir = vo_RootPath;
-homedir = fullfile(projdir, sprintf('s%d', subjnum));
+homedir = fullfile(vo_RootPath, 'Data', sprintf('s%d', subjnum));
 
 % Mesh files
 msh.pth{1} = '3DAnatomy/Left/3DMeshes/lh_smoothed.mat';
@@ -48,7 +47,7 @@ msh.views = {'VO_Zoom' 'VO_WholeBrain'};
 imageTypes = {'anat' 'meanmap' 'ecc_masked' 'angle_masked' 'varexp_masked'};
         
 % Where should we store all the pics?
-savepth = fullfile(projdir, 'Images', sprintf('s%d', subjnum));
+savepth = fullfile(vo_RootPath, 'Images', sprintf('s%d', subjnum));
 if ~exist(savepth,'file'), mkdir(savepth); end
 
 %% Go
