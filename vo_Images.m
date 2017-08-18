@@ -1,16 +1,16 @@
 function vo_Images(subjnum)
 % vo_Images
 %
-% Make mesh images of S1 and S3 anatomy, field maps, and ROIs for F1000
+% Make mesh images of S1, S2, S3 anatomy, field maps, and ROIs for F1000
 % paper on ventral maps
 %
 % Make it a function rather than script so that we can call internal
 % subroutines.
 %
 % To run: 
-%   v4_Images(1); % make images for subject 1
-%   v4_Images(3); % make images for subject 3
-
+%   vo_Images(1); % make images for subject 1
+%   vo_Images(2); % make images for subject 2
+%   vo_Images(3); % make images for subject 3
 
 % Check inputs
 if nargin==0, subjnum = 1; end
@@ -77,9 +77,6 @@ for m = 1:numel(msh.pth)
     end
     
 end
-
-
-
 
 
 end
